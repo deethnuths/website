@@ -1,0 +1,7 @@
+{
+  "name": "link-website",
+  "private": true,
+  "scripts": {
+    "dev": "npx wrangler pages dev . --port 8788"
+  }
+}
