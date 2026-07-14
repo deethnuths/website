@@ -43,24 +43,6 @@ body::after {
   z-index: 0;
 }
 
-/* holographic glow that follows the cursor, sized like the background blobs */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 40vmin;
-  height: 40vmin;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--pink), transparent 70%);
-  filter: blur(50px);
-  mix-blend-mode: screen;
-  opacity: 0.22;
-  transform: translate(calc(var(--mx) - 50%), calc(var(--my) - 50%));
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* slow-shifting iridescent sheen, always alive */
 body::after {
   background: conic-gradient(from 0deg at 50% 50%,
@@ -81,7 +63,6 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: 0;
-  overflow: hidden;
   pointer-events: none;
   transform: translate(calc((var(--mx) - 50vw) * -0.07), calc((var(--my) - 50vh) * -0.07));
   transition: transform 0.6s ease-out;
@@ -155,7 +136,6 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: 1;
-  overflow: hidden;
   pointer-events: none;
   transform: translate(calc((var(--mx) - 50vw) * 0.04), calc((var(--my) - 50vh) * 0.04));
   transition: transform 0.3s ease-out;
